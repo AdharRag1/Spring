@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Counter Page</title>
+</head>
+<body>
+    <h1>Counter Page</h1>
+    <p>You have visited the home pag <span th:text="${counter}">0</span> times</p>
+    <form action="/reset" method="post">
+        <button type="submit">Reset Countr</button>
+    </form>
+    <p><a href="/">Go to Home</a></p>
+    <p><a href="/incrementByTwo">Increment by Two </a></p>
+</body>
+</html>

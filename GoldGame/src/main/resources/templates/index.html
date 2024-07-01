@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ninja Gold Game</title>
+</head>
+<body>
+    <h1>Ninja Gold Game</h1>
+    <p>Your Gold: <span th:text="${gold}">0</span></p>
+    <form action="/processe" method="post">
+        <h1>Farm</h1>
+        <input type="hidden" name="place" value="farm" />
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process" method="post">
+        <h1>Cave</h1>
+        <input type="hidden" name="place" value="cave" />
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process" method="post">
+        <h1>House</h1>
+        <input type="hidden" name="place" value="house" />
+        <button type="submit">Find Gold!</button>
+    </form>
+    <form action="/process" method="post">
+        <h1>Quest</h1>
+        <input type="hidden" name="place" value="quest" />
+        <button type="submit">Find Gold!</button>
+    </form>
+    <h2>Activities:</h2>
+    <ul>
+        <li th:each="activity : ${activities}" th:text="${activity}"></li>
+    </ul>
+</body>
+</html>
